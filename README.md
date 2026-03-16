@@ -36,8 +36,8 @@ AI tools were used during development.
 AI tools were used in the development of some materials in this
 repository. Specifically, the Drafting and Editing categories were suggested for using AI in writing.
 
-AI Tool: ChatGPT (OpenAI)
-Model: GPT-5
-Date Used: 2026-03
-Assistance Categories: Brainstorming
-Human Role: All output reviewed, modified, and validated by the author.
+- AI Tool: ChatGPT (OpenAI)
+- Model: GPT-5
+- Date Used: 2026-03
+- Assistance Categories: Brainstorming
+- Human Role: All output reviewed, modified, and validated by the author.
