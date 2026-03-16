@@ -27,6 +27,10 @@ AI tools were used during development.
 | Editing | Checking for grammar, clarity, or style. |
 | Coding | Assistance with programming or debugging. |
 
+## AI-ATLI Icons and Summary
+
+![AI Attribution for Learning and Instruction icons and summary](ai-atli_v1.png)
+
 ## Transparency Statement
 
 AI tools were used in the development of some materials in this
