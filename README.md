@@ -3,6 +3,9 @@ This repository, AI ATtribution for Learning &amp; Instruction (AI-ATLI), aims t
 
 **If you use these materials, please cite the repository.**
 
+## AI-ATLI Icons and Summary
+
+![AI Attribution for Learning and Instruction icons and summary](ai-atli_v1.png)
 
 ## AI - Attribution for Leanring and Instruction (ATLI) Framework v1.0
 
@@ -27,9 +30,6 @@ AI tools were used during development.
 | Editing | Checking for grammar, clarity, or style. |
 | Coding | Assistance with programming or debugging. |
 
-## AI-ATLI Icons and Summary
-
-![AI Attribution for Learning and Instruction icons and summary](ai-atli_v1.png)
 
 ## Transparency Statement
 
