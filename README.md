@@ -22,7 +22,7 @@ AI tools were used during development.
 
 | Category | Description |
 |---|---|
-| Brainstorming | Initial generatation of ideas, examples, or prompts. |
+| Brainstorming | Initial generation of ideas, examples, or prompts. |
 | Drafting | Outlining or initial text drafts. |
 | Editing | Checking for grammar, clarity, or style. |
 | Coding | Assistance with programming or debugging. |
