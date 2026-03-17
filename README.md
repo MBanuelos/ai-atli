@@ -1,4 +1,7 @@
 # ai-atli
+
+_atli_ (Nahuatl) - to drink water
+
 This repository, AI ATtribution for Learning &amp; Instruction (AI-ATLI), aims to provide transparent and reproducible ways to documenting how AI tools were used in the development of both instruction and learning materials in education. This project was motivated by a need in education as well as influenced by Open Education Resources (OER) and Creative Commons. Attribution is separated into two main categories: AI Permissions and AI Creation. Each category has an associated icon that is also included in this repository.
 
 **If you use these materials, please cite the repository.**
