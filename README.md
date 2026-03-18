@@ -46,3 +46,25 @@ repository. Specifically, the Drafting and Editing categories were suggested for
 - Date Used: 2026-03
 - Assistance Categories: Brainstorming
 - Human Role: All output reviewed, modified, and validated by the author.
+
+## GitHub Pages Prototype
+
+This branch includes a static GitHub Pages prototype that demonstrates how
+students or instructors could generate an AI-ATLI attribution statement in a
+browser.
+
+### What the prototype does
+
+- Presents the AI Permissions and AI Creation framework in a public-facing format.
+- Lets users choose categories and enter tool, model, date, and human review details.
+- Generates copy-ready plain text and Markdown attribution statements.
+
+### Publishing on GitHub Pages
+
+Because the site is plain HTML, CSS, and JavaScript, it can be deployed
+directly from the repository without a build step.
+
+1. Push the branch to GitHub.
+2. In repository settings, open Pages.
+3. Set the source to deploy from the selected branch and the repository root.
+4. Publish the site.

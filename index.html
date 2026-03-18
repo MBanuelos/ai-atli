@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AI-ATLI Attribution Generator</title>
+        <meta
+            name="description"
+            content="Generate AI-ATLI attribution statements for student work, instructional materials, and other educational content."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main class="page-shell">
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">AI-ATLI by mario ba&ntildeuelos</p>
+                    <h1>Create transparent AI use statements in education.</h1>
+                    <p class="lede">
+                        This prototype turns the AI-ATLI framework into a
+                        generator for both learners and educators. Users select
+                        permission and creation categories, record tool details,
+                        and either copy a final attribution statement or
+                        download a .html attribution statement/attribution
+                        buttons.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#generator" class="button button-primary"
+                            >Generate</a
+                        >
+                        <a href="README.md" class="button button-secondary"
+                            >Read Framework</a
+                        >
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <p class="card-label">AI-ATLI</p>
+                    <p class="name-note">
+                        <strong
+                            >AI Attribution for Learning &amp;
+                            Instruction</strong
+                        >
+                    </p>
+                    <p class="name-note">
+                        <em>atli</em> comes from the Nahuatl phrase "to drink
+                        water," as a reminder that digital tools still rely on
+                        physical resources.
+                    </p>
+                    <p class="water-note">
+                        <strong>Water-use note:</strong> "GPT-4o alone is
+                        responsible for evaporating an amount of freshwater
+                        equivalent to the annual drinking needs of almost 1.2
+                        million people."
+                    </p>
+                    <p class="water-source">
+                        <a href="https://arxiv.org/abs/2505.09598v1"
+                            >Read source</a
+                        >
+                    </p>
+                </div>
+            </section>
+
+            <section class="framework-grid" aria-label="AI-ATLI categories">
+                <article class="framework-card">
+                    <div class="framework-header">
+                        <img src="icons/ai-ok_dark.png" alt="AI-OK icon" />
+                        <img src="icons/ai-no_dark.png" alt="AI-NO icon" />
+                    </div>
+                    <h2>AI Permissions</h2>
+                    <p>
+                        Show whether a work may be uploaded to AI or large
+                        language models.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>AI-OK</strong>: content may be uploaded to
+                            AI systems.
+                        </li>
+                        <li>
+                            <strong>AI-NO</strong>: content may not be uploaded
+                            to AI systems.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="framework-card">
+                    <div class="framework-header">
+                        <img
+                            src="icons/ai-brainstorm_dark.png"
+                            alt="Brainstorming icon"
+                        />
+                        <img
+                            src="icons/ai-draft_dark.png"
+                            alt="Drafting icon"
+                        />
+                        <img
+                            src="icons/ai-editing_dark.png"
+                            alt="Editing icon"
+                        />
+                        <img src="icons/ai-code_dark.png" alt="Coding icon" />
+                    </div>
+                    <h2>AI Creation</h2>
+                    <p>Document how AI contributed to developing the work.</p>
+                    <ul>
+                        <li>
+                            <strong>Brainstorming</strong>: ideas, examples,
+                            prompts.
+                        </li>
+                        <li>
+                            <strong>Drafting</strong>: outlines or initial
+                            drafts.
+                        </li>
+                        <li>
+                            <strong>Editing</strong>: grammar, clarity, or
+                            style.
+                        </li>
+                        <li>
+                            <strong>Coding</strong>: programming or debugging
+                            assistance.
+                        </li>
+                    </ul>
+                </article>
+                All icons developed by Bethany Hernandez-Torres.
+            </section>
+
+            <section class="generator-section" id="generator">
+                <div class="section-heading">
+                    <p class="eyebrow">Interactive Prototype</p>
+                    <h2>Generate an attribution statement</h2>
+                    <p>
+                        The form below is designed for students, instructors, or
+                        authors who need a transparent AI use disclosure that is
+                        similar to a Creative Commons attribution workflow.
+                    </p>
+                </div>
+
+                <div class="generator-layout">
+                    <form class="generator-form" id="attribution-form">
+                        <div class="form-group">
+                            <label for="work-title">Title of work</label>
+                            <input
+                                id="work-title"
+                                name="workTitle"
+                                type="text"
+                                placeholder="Example: Reflection Essay on Water Justice"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="creator-name"
+                                >Creator or student name</label
+                            >
+                            <input
+                                id="creator-name"
+                                name="creatorName"
+                                type="text"
+                                placeholder="Example: Maria Lopez"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="context">Course or context</label>
+                            <input
+                                id="context"
+                                name="context"
+                                type="text"
+                                placeholder="Example: EDU 301, Spring 2026"
+                            />
+                        </div>
+
+                        <fieldset class="form-group">
+                            <legend>AI permission</legend>
+                            <div class="choice-grid">
+                                <label class="choice-card">
+                                    <input
+                                        type="radio"
+                                        name="permission"
+                                        value="AI-OK"
+                                        checked
+                                    />
+                                    <span>AI-OK</span>
+                                    <small
+                                        >This work may be uploaded to AI
+                                        systems.</small
+                                    >
+                                </label>
+                                <label class="choice-card">
+                                    <input
+                                        type="radio"
+                                        name="permission"
+                                        value="AI-NO"
+                                    />
+                                    <span>AI-NO</span>
+                                    <small
+                                        >This work may not be uploaded to AI
+                                        systems.</small
+                                    >
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <legend>AI creation categories</legend>
+                            <div class="choice-grid choice-grid-compact">
+                                <label class="choice-card">
+                                    <input
+                                        type="checkbox"
+                                        name="creationCategory"
+                                        value="Brainstorming"
+                                        checked
+                                    />
+                                    <span>Brainstorming</span>
+                                    <small
+                                        >Idea generation, examples,
+                                        prompts.</small
+                                    >
+                                </label>
+                                <label class="choice-card">
+                                    <input
+                                        type="checkbox"
+                                        name="creationCategory"
+                                        value="Drafting"
+                                    />
+                                    <span>Drafting</span>
+                                    <small>Outlines or early draft text.</small>
+                                </label>
+                                <label class="choice-card">
+                                    <input
+                                        type="checkbox"
+                                        name="creationCategory"
+                                        value="Editing"
+                                    />
+                                    <span>Editing</span>
+                                    <small
+                                        >Grammar, clarity, or style
+                                        revision.</small
+                                    >
+                                </label>
+                                <label class="choice-card">
+                                    <input
+                                        type="checkbox"
+                                        name="creationCategory"
+                                        value="Coding"
+                                    />
+                                    <span>Coding</span>
+                                    <small
+                                        >Programming or debugging help.</small
+                                    >
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tool-name">AI tool</label>
+                                <input
+                                    id="tool-name"
+                                    name="toolName"
+                                    type="text"
+                                    placeholder="Example: ChatGPT"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="model-name">Model</label>
+                                <input
+                                    id="model-name"
+                                    name="modelName"
+                                    type="text"
+                                    placeholder="Example: GPT-5"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date-used">Date used</label>
+                                <input
+                                    id="date-used"
+                                    name="dateUsed"
+                                    type="date"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="audience">Purpose</label>
+                                <select id="audience" name="audience">
+                                    <option value="student assignment">
+                                        Student assignment
+                                    </option>
+                                    <option value="course material">
+                                        Course material
+                                    </option>
+                                    <option value="presentation">
+                                        Presentation
+                                    </option>
+                                    <option value="project artifact">
+                                        Project artifact
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="human-role"
+                                >Human role in the final work</label
+                            >
+                            <textarea
+                                id="human-role"
+                                name="humanRole"
+                                rows="3"
+                                placeholder="Example: I reviewed, revised, and verified all final content before submission."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Additional notes</label>
+                            <textarea
+                                id="notes"
+                                name="notes"
+                                rows="3"
+                                placeholder="Optional details about prompts, limitations, or where AI input was rejected."
+                            ></textarea>
+                        </div>
+                    </form>
+
+                    <aside class="output-panel">
+                        <div class="output-header">
+                            <p class="eyebrow">Live Output</p>
+                            <h3>Attribution preview</h3>
+                        </div>
+
+                        <div
+                            class="token-row"
+                            id="token-row"
+                            aria-live="polite"
+                        ></div>
+
+                        <div class="output-block">
+                            <p class="output-label">Plain text</p>
+                            <pre id="plain-output"></pre>
+                        </div>
+
+                        <div class="output-block">
+                            <p class="output-label">Markdown</p>
+                            <pre id="markdown-output"></pre>
+                        </div>
+
+                        <div class="button-row">
+                            <button
+                                class="button button-primary"
+                                id="copy-plain"
+                                type="button"
+                            >
+                                Copy Plain Text
+                            </button>
+                            <button
+                                class="button button-secondary"
+                                id="copy-markdown"
+                                type="button"
+                            >
+                                Copy Markdown
+                            </button>
+                            <button
+                                class="button button-secondary"
+                                id="download-card"
+                                type="button"
+                            >
+                                Download Attribution Card
+                            </button>
+                            <button
+                                class="button button-secondary"
+                                id="download-buttons-png"
+                                type="button"
+                            >
+                                Download Buttons PNG
+                            </button>
+                        </div>
+
+                        <p
+                            class="copy-status"
+                            id="copy-status"
+                            aria-live="polite"
+                        ></p>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="site-attribution" aria-label="Site AI use statement">
+                <div class="site-attribution-card">
+                    <p class="eyebrow">AI Use Statement</p>
+                    <h2>This page was developed using the AI-ATLI framework.</h2>
+                    <div class="site-attribution-icons" aria-hidden="true">
+                        <img src="icons/ai-ok_dark.png" alt="" />
+                        <img src="icons/ai-draft_dark.png" alt="" />
+                        <img src="icons/ai-code_dark.png" alt="" />
+                    </div>
+                    <p class="site-attribution-text">
+                        <strong>AI Permission:</strong> AI-OK
+                    </p>
+                    <p class="site-attribution-text">
+                        <strong>AI Creation Categories:</strong> Drafting, Coding
+                    </p>
+                    <p class="site-attribution-text">
+                        <strong>AI Tool:</strong> OpenAI Codex
+                    </p>
+                    <p class="site-attribution-text">
+                        <strong>Human Role:</strong> Mario Ba&ntilde;uelos directed
+                        the workflow, reviewed all generated suggestions, made
+                        final design and content decisions, and approved the
+                        final implementation.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+    <script src="icon-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
