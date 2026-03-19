@@ -190,10 +190,14 @@ img {
   width: 70px;
   height: 70px;
   object-fit: contain;
-  border-radius: 18px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.6);
   padding: 0.35rem;
   border: 1px solid rgba(23, 33, 28, 0.08);
+}
+
+.framework-header {
+  margin-bottom: 0.7rem;
 }
 
 .generator-section {
@@ -231,10 +235,15 @@ img {
   width: 70px;
   height: 70px;
   object-fit: contain;
-  border-radius: 18px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.72);
   padding: 0.35rem;
   border: 1px solid rgba(23, 33, 28, 0.08);
+}
+
+#download-card,
+#download-buttons-png {
+  padding: 0.6rem 0.85rem;
 }
 
 .site-attribution-text {
