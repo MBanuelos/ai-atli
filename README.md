@@ -8,7 +8,7 @@ This repository, AI ATtribution for Learning &amp; Instruction (AI-ATLI), aims t
 
 ## AI-ATLI Icons and Summary
 
-![AI Attribution for Learning and Instruction icons and summary](ai-atli_v1.png)
+![AI Attribution for Learning and Instruction icons and summary](ai-atli_v1_1.png)
 
 All icons created by _Bethany Hernandez-Torres_.
 
