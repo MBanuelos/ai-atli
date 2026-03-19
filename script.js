@@ -11,6 +11,7 @@ const downloadButtonsPngButton = document.getElementById(
 );
 const dateInput = document.getElementById("date-used");
 const embeddedIconData = window.AI_ATLI_ICON_DATA || {};
+const iconSourceCache = {};
 
 if (dateInput && !dateInput.value) {
   dateInput.value = new Date().toISOString().slice(0, 10);
@@ -177,12 +178,49 @@ async function imageToDataUrl(path) {
   return image.currentSrc || image.src || path;
 }
 
-async function getIconSource(key) {
-  if (embeddedIconData[key]) {
-    return embeddedIconData[key];
+function blobToDataUrl(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onloadend = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error("Could not read icon blob."));
+    reader.readAsDataURL(blob);
+  });
+}
+
+async function fetchIconDataUrl(path) {
+  const response = await fetch(path, { cache: "no-store" });
+
+  if (!response.ok) {
+    throw new Error(`Could not fetch ${path}`);
   }
 
-  return imageToDataUrl(iconMap[key]);
+  return blobToDataUrl(await response.blob());
+}
+
+async function getIconSource(key) {
+  if (iconSourceCache[key]) {
+    return iconSourceCache[key];
+  }
+
+  const path = iconMap[key];
+
+  if (window.location.protocol !== "file:") {
+    try {
+      iconSourceCache[key] = await fetchIconDataUrl(path);
+      return iconSourceCache[key];
+    } catch {
+      // Fall back to embedded data when live fetch is unavailable.
+    }
+  }
+
+  if (embeddedIconData[key]) {
+    iconSourceCache[key] = embeddedIconData[key];
+    return iconSourceCache[key];
+  }
+
+  iconSourceCache[key] = await imageToDataUrl(path);
+  return iconSourceCache[key];
 }
 
 function loadImageElement(source) {
