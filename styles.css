@@ -106,7 +106,7 @@ img {
 .button {
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 0.85rem 1.1rem;
+  padding: 0.6rem 0.85rem;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
